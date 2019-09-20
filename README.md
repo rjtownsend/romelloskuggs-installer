@@ -96,6 +96,7 @@ achieve that by registering `@composer drupal:scaffold` as post-install and post
 The ```composer.json``` applies patches using the [composer-patches](https://github.com/cweagans/composer-patches) plugin.
 To add a patch to drupal module foobar insert the patches section in the extra 
 section of composer.json:
+
 ```json
 "extra": {
     "patches": {

@@ -80,6 +80,11 @@
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
             }
-        }
+        },
+        "patches": {
+        	"drupal/core": {
+            	"Height calculation error when used with Settings Tray and Bootstrap css": "https://www.drupal.org/files/issues/2019-09-14/toolbar_height_2958478_17.patch"
+        	}
+    	}
     }
 }
