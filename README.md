@@ -12,7 +12,10 @@ Usage:
 composer create-project rjtownsend/romelloskuggs-installer:8.x-dev some-dir --no-interaction
 
 # Navigate to http://website.local/core/install.php and install as usual
-
+#
+# Enabling settings.local.php is recommended during development, 
+# Uncomment on web/sites/default/settings.php to enable
+#
 # Export site config to the config/sync directory
 
 cd some-dir
