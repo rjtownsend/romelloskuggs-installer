@@ -1,10 +1,10 @@
-# ROMELLO SKUGGS
+# ROMELLO SKUGGS INSTALLER
 
 ## A starter website for Drupal 8 Developers
 
-Installs and configures core and contrib modules plus a [bootstrap subtheme](https://github.com/rjtownsend/bs_subtheme). 
+Main ```composer.json``` used for the [Romello Skuggs](https://github.com/rjtownsend/romelloskuggs) Drupal 8 Installation Profile. 
 Project goal is to provide a starter website for developers and site-builders similar to a starter theme 
-for front-end developers. Composer.json was heavily borrowed from [Composer template for Drupal projects](https://github.com/drupal-composer/drupal-project). 
+for front-end developers. ```composer.json``` was heavily borrowed from [Composer template for Drupal projects](https://github.com/drupal-composer/drupal-project). 
 
 Usage:
 
