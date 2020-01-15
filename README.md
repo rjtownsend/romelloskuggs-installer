@@ -2,9 +2,11 @@
 
 ## A starter website for Drupal 8 Developers
 
-Main ```composer.json``` used for the [Romello Skuggs](https://github.com/rjtownsend/romelloskuggs) Drupal 8 Installation Profile. 
-Project goal is to provide a starter website for developers and site-builders similar to a starter theme 
-for front-end developers. ```composer.json``` was heavily borrowed from [Composer template for Drupal projects](https://github.com/drupal-composer/drupal-project). 
+Optional Drupal installer used for the [Romello Skuggs](https://github.com/rjtownsend/romelloskuggs) Drupal 8 Installation Profile. 
+The project goal of Romello Skuggs is to provide a starter website for developers and site-builders similar to a starter theme 
+for front-end developers. This installer provides the base ```composer.json``` file required to build any Drupal site. 
+
+This installer was heavily borrowed from [Composer template for Drupal projects](https://github.com/drupal-composer/drupal-project). 
 
 Usage:
 
@@ -19,23 +21,18 @@ drush cex -y
 #
 # Enabling settings.local.php is recommended during development, 
 # Uncomment on web/sites/default/settings.php to enable
+#
+# Optional: create a bootstrap_sass subtheme using the subtheme installation script
+# Full instructions for installing can be found here: https://www.drupal.org/project/bootstrap_sass
+cd web/themes/contrib/bootstrap_sass
+./scripts/create_subtheme.sh
+#
+# Subtheme will need to be enabled through the Drupal UI
 ```
 
-With `composer require ...` you can download new modules, themes, and other dependencies 
-to your installation. Eg:
+## What does the Romello Skuggs Installer do?
 
-```
-cd some-dir
-composer require drupal/devel:~1.0
-```
-
-Note: the `composer create-project` command passes ownership of all files to the 
-project that is created. You should create a new git repository and commit 
-all files not excluded by the .gitignore file.
-
-## What does composer.json do?
-
-When installing ```composer.json``` some tasks are taken care of: 
+When installing using the Romello Skuggs Installer ```composer.json``` file, the following tasks are taken care of: 
 
 * Drupal will be installed in the `web`-directory.
 * Autoloader is implemented to use the generated composer autoloader in `vendor/autoload.php`,
@@ -50,6 +47,8 @@ When installing ```composer.json``` some tasks are taken care of:
 * Creates `web/sites/default/files`-directory.
 * Latest version of drush is installed locally for use at `vendor/bin/drush`.
 * Latest version of DrupalConsole is installed locally for use at `vendor/bin/drupal`.
+* Creates `config/sync` directory for Drupal config yml files
+* Sets the `bootstrap_sass` subtheme installation script as executable
 * Creates environment variables based on your .env file. See [.env.example](.env.example).
 
 ## How to Update Drupal Core
