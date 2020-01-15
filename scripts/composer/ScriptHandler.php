@@ -65,6 +65,20 @@ class ScriptHandler {
         $event->getIO()->write("Created settings.local.php at /sites/default/settings.local.php, uncomment in web/sites/default/settings.php to enable");
     }
     
+    // Make the bootstrap_sass subtheme installation script executable
+    if ($fs->exists($drupalRoot . '/themes/contrib/bootstrap_sass/scripts/create_subtheme.sh')) {
+        $fs->chmod($drupalRoot . '/themes/contrib/bootstrap_sass/scripts/create_subtheme.sh', 0744);
+        $event->getIO()->write("Made the bootstrap_sass subtheme installation script executable");
+    }
+    
+    // Create the config/sync directory with chmod 0755
+    if (!$fs->exists('config/sync')) {
+        $oldmask = umask(0);
+        $fs->mkdir('config/sync', 0755);
+        umask($oldmask);
+        $event->getIO()->write("Created the config/sync directory with chmod 0755");
+    }
+    
   }
 
   /**
