@@ -21,6 +21,7 @@ drush cex -y
 #
 # Enabling settings.local.php is recommended during development, 
 # Uncomment on web/sites/default/settings.php to enable
+# Alternatively, use the command drupal site:mode dev
 #
 # Optional: create a bootstrap_sass subtheme using the subtheme installation script
 # Full instructions for installing can be found here: https://www.drupal.org/project/bootstrap_sass
